@@ -1,13 +1,16 @@
 # LemonadeStand
 An Azure-powered uprade of the beloved 1979 game, from back in the Apple II days. You may also be familiar with it from C-64/128 or various DOS ports. I played it first on the Commodore 64 and it's one of the first games I think we had. Nostalgia for ya.
 
+![Original Opening Screen](original_opening_screen.jpg)
+
 ## Goals
 
  - Convert the game to a browser-based application
  - Explore browser, library and cloud technologies 
- - Develop a retro, 8-bit look and feel for the UI
+ - Develop a retro, 8-bit look and feel for the UI, but make it pop hehehe
  - Over-engineer the heck out of this because why not
- - Perhaps introduce high scoring systems, 5-day weather forecasts, some other elements (like choose a neighborhood), or even some kind of multi-player aspect
+ - Perhaps introduce high scoring systems, 5-day weather forecasts, some other elements (like choose a neighborhood)
+ - Create a competitive "season" for a world-wide simultaneous multiplayer 
 
 ## Tech Stack
 
@@ -16,6 +19,7 @@ I have lived in the dotnet world and will continue to do so. I'll be running thi
  - dotnet 6
  - Azure Functions
  - (maybe?) Vue.JS
+ - (likely?) SignalR
  
 ## Project Needs
 
