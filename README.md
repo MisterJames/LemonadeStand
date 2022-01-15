@@ -1,12 +1,14 @@
 # Lemonade Stand
-An Azure-powered uprade of the beloved 1979 game, from back in the Apple II days. You may also be familiar with it from C-64/128 or various DOS ports. I played it first on the Commodore 64 and it's one of the first games I think we had. Nostalgia for ya.
+
+An browser-based, over-powered Azure uprade of the beloved 1979 game, from back in the Apple II days. You may also be familiar with it from C-64/128 or various DOS ports. I played it first on the Commodore 64 and it's one of the first games I think we had. Nostalgia for ya.
 
 ![Original Opening Screen](original_opening_screen.jpg)
 
 ## Goals
 
+ - Have some fun, learn some stuff, don't take it too seriously
  - Convert the game to a browser-based application
- - Explore browser, library and cloud technologies 
+ - Explore browser, drawing library and new-ish cloud technologies 
  - Develop a retro, 8-bit look and feel for the UI, but make it pop hehehe
  - Over-engineer the heck out of this because why not
  - Perhaps introduce high scoring systems, 5-day weather forecasts, some other elements (like choose a neighborhood)
