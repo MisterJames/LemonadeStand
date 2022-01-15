@@ -6,13 +6,13 @@ An browser-based, over-powered Azure uprade of the beloved 1979 game, from back 
 
 ## Goals
 
- - Have some fun, learn some stuff, don't take it too seriously
  - Convert the game to a browser-based application
  - Explore browser, drawing library and new-ish cloud technologies 
  - Develop a retro, 8-bit look and feel for the UI, but make it pop hehehe
  - Over-engineer the heck out of this because why not
  - Perhaps introduce high scoring systems, 5-day weather forecasts, some other elements (like choose a neighborhood)
  - Create a competitive "season" for a world-wide simultaneous multiplayer 
+ - Have some fun, learn some stuff, don't take it too seriously, work away at it as I have time
 
 ## Tech Stack
 
