@@ -5,8 +5,9 @@ An Azure-powered uprade of the beloved 1979 game, from back in the Apple II days
 
  - Convert the game to a browser-based application
  - Explore browser, library and cloud technologies 
+ - Develop a retro, 8-bit look and feel for the UI
  - Over-engineer the heck out of this because why not
- - Perhaps introduce high scoring systems, some other elements (like choose a neighborhood), or even some kind of multi-player aspect
+ - Perhaps introduce high scoring systems, 5-day weather forecasts, some other elements (like choose a neighborhood), or even some kind of multi-player aspect
 
 ## Tech Stack
 
