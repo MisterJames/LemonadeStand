@@ -3,7 +3,7 @@
 These were the notes that were made by codenautics.com/lemonade in the port of the 1979 code, listed at `OriginalSource.bas` in this directory.
 
 ## Subroutines & Branch Points
-
+```
 300 REM START OF GAME
 400 REM WEATHER REPORT
 500 REM START OF NEW DAY
@@ -24,8 +24,10 @@ These were the notes that were made by codenautics.com/lemonade in the port of t
 16000: set up machine language music player
 17000: if sc = 5 then ... display thunder & lightning
 18000 VTAB 24: PRINT " PRESS SPACE TO CONTINUE, ESC TO END...";
+```
 
 ## Variables
+```
 A(i): Assets (cash on hand, in dollars)
 C: cost of lemonade per glass, in cents
 G(i): normally 1; 0 if everything is ruined by thunderstorm
@@ -44,3 +46,4 @@ S3: cost per advertising sign, in dollars
 SC: sky color (2=sunny, 5=thunderstorms, 7=hot & dry, 10=cloudy).
 X1: set to 1 when it's cloudy; not sure what the intent was, but has no actual effect since line 2100 is unreachable.
 X2: set to 1 when the street crew has worked and was not thirsty;  apparently intended to prevent street crews from coming again, but doesn't actually work since line 2200 is unreachable.
+```
