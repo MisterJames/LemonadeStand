@@ -72,9 +72,9 @@ DailyChoices GetDailyUserChoices(int playerNumber){
 
     Console.WriteLine($"It's time for player {playerNumber} to conduct business for the day!");
 
-    var price = GetNumberInputFromConsole("How much will you charge per glass? ");
+    var price = GetNumberInputFromConsole("How cents will you charge per glass? ");
     var numGlasses = GetNumberInputFromConsole("How may glasses will you make? ");
-    var signs = GetNumberInputFromConsole("How many signs will make? ");
+    var signs = GetNumberInputFromConsole("How many signs will you make? ");
 
     return new DailyChoices{ 
         DrinkPriceInCents = price, 
@@ -216,3 +216,4 @@ void DisplayDailyResults(GameState state)
         
     }
 }
+
