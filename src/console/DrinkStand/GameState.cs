@@ -1,18 +1,36 @@
 public class GameState
 {
-    private const int StartingBalance = 1000;
-
-    public GameState()
+    public GameState(int numPlayers)
     {
-        PastDays = new List<DailyResult>();
+        // by default, the game will go more than one day
+        ContinuePlaying = true;
+
+        // keep track of the progress for each player in the game
+        PlayerProfiles = new List<PlayerProfile>();
+        for (int i = 0; i < numPlayers; i++)
+        {
+            PlayerProfiles.Add(new PlayerProfile(i + 1));
+        }
     }
 
-    public int NumberOfPlayers { get; set; }
+    public int NumberOfPlayers => PlayerProfiles.Count;
+    public List<PlayerProfile> PlayerProfiles { get; init; }
+    public bool ContinuePlaying { get; set; } 
+}
 
+public class PlayerProfile
+{
+    public PlayerProfile(int playerNumber)
+    {        
+        PlayerNumber = playerNumber;
+        PastDays = new List<DailyResult>();        
+    }
+
+    private const int StartingBalance = 1000;
+    public int PlayerNumber { get; set; }
     public List<DailyResult> PastDays { get; set; }
     public int WalletBalance => StartingBalance + PastDays.Sum(d => d.NetRevenue);
 
-    public int CurrentDay { get; set; }
 }
 
 public class DailyActvity
