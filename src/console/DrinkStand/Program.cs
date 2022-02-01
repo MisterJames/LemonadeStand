@@ -1,4 +1,5 @@
 ﻿// display our game banner
+Console.Clear();
 Console.WriteLine($"{Environment.NewLine}Welcome to Drink Stand!{Environment.NewLine}");
 WaitForEnterPress();
 Console.Clear();
@@ -61,7 +62,6 @@ int GetNumberOfPlayers(){
             WaitForEnterPress();
         }
         
-        Console.Clear();
         Console.WriteLine(Environment.NewLine);
     }
     return playerInputCount;
