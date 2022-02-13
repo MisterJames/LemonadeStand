@@ -97,12 +97,12 @@ void WaitForEnterPress()
 // number if they enter some other text
 int GetNumberInputFromConsole(string prompt)
 {
-    int number = 0;
+    int number = -1;
 
     // number is the starting value that we just set. this loop lets the user
     // type something in, and we will try to turn it into a number until the
     // text entered can be turned into a number
-    while (number < 1)
+    while (number < 0)
     {
         // display the prompt...
         Console.Write(prompt);
