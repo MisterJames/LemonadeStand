@@ -10,46 +10,53 @@ public static class GameEngine
     private const int TypicalRetailPrice = 50;
     private const int TypicalDailySales = 30;
 
-    public static Weather GenerateWeatherConditions(){
-        return Weather.Sunny;
-    }
-
-    public static DailyResult ProcessDay(GameState state, PlayerProfile player, Weather weather, DailyChoices choices)
+    public static DailyResult ProcessDay(GameState state, PlayerProfile player, double weatherModifier, DailyChoices choices)
     {
-        // the number of drinks sold depends on the weather, the price
-        // the person chose, and the number of signs made
-        var weatherModifier = ComputeWeatherModifier(weather);
+        // the number of drinks sold depends on the weather, the price the player 
+        // set for the drinks, and the number of signs the player chose to make
         var priceModifier = ComputePriceModifier(choices.DrinkPriceInCents);
         var signsModifier = ComputeSignsModifier(choices.SignsToMake);
 
+        // our potential number of drinks sold is a result of typcial sales and our modifiers
         var potentialDrinksSold = (int)(TypicalDailySales * weatherModifier * priceModifier * signsModifier);
 
-        var drinksSold = Math.Min(choices.DrinksToMake, potentialDrinksSold);
+        // our ACTUAL drinks sold can't be more than we made!
+        var actualDrinksSold = Math.Min(choices.DrinksToMake, potentialDrinksSold);
                 
         var result = new DailyResult(choices)
         {
             DayNumber = player.PastDays.Count + 1,
             DrinkCosts = (player.PastDays.Count < 3 ? 15 : 20) * choices.DrinksToMake,
             SignCosts = choices.SignsToMake * SignCost,
-            DrinksSold = drinksSold
+            DrinksSold = actualDrinksSold
         };
 
         return result;
     }
 
-    private static float ComputeWeatherModifier(Weather weather)
+    public static double ComputeSignsModifier(int signCount)
     {
-        return 1;
+        var signEffect = Math.Max(0.85F, 1 + Math.Log10(signCount));
+
+        Console.WriteLine($"There were {signCount} signs with {signEffect} modifier.");
+
+        return signEffect;
     }
 
-    private static float ComputeSignsModifier(int signCount)
+    public static double ComputePriceModifier(int price)
     {
-        return 1;
-    }
+        var priceShift = 50;
+        var sweetSpot = 40;
+        var salesDrift = -2;
+        var priceScale = 0.124;
+        var priceAnchor = 200;
 
-    private static float ComputePriceModifier(int price)
-    {
-        return 1;
+        var effect = Math.Log(0.25) * price + 100;
+        var modifier = (Math.Max(effect, 2.5) / 100);
+
+        Console.WriteLine($"Price of {price} left {modifier} modifier.");
+
+        return modifier;
     }
 
 }

@@ -74,5 +74,6 @@ public enum Weather
     Sunny,
     HotAndDry,
     Cloudy,
+    CoolAndCold,
     Thunderstorms
 }

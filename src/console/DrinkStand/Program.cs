@@ -14,9 +14,12 @@ WaitForEnterPress();
 while (game.ContinuePlaying)
 {
     // get and display the weather so the user can decide what to do
-    var todaysWeather = GameEngine.GenerateWeatherConditions();
+    var todaysWeather = WeatherEngine.GenerateWeatherConditions();
     DisplayWeather(todaysWeather);
     WaitForEnterPress();
+
+    // the weather has the same affect on all players, so we compute that first
+    var weatherModifier = WeatherEngine.ComputeWeatherModifier(todaysWeather);
 
     // figure out how we did today and add it to our progress
     foreach (var player in game.PlayerProfiles)
@@ -25,7 +28,7 @@ while (game.ContinuePlaying)
         var todaysChoices = GetDailyUserChoices(player.PlayerNumber);
         DisplayDailyChoices(player, todaysChoices);    
 
-        var todaysResults = GameEngine.ProcessDay(game, player, todaysWeather, todaysChoices);
+        var todaysResults = GameEngine.ProcessDay(game, player, weatherModifier, todaysChoices);
         player.PastDays.Add(todaysResults);
     }
     WaitForEnterPress();
