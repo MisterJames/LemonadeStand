@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrinkStand", "DrinkStand\DrinkStand.csproj", "{3187E95C-C2D2-4B65-9E39-A791BD528E1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrinkStandTests", "DrinkStandTests\DrinkStandTests.csproj", "{316A93C3-2009-4E90-9A91-4797E15CFF59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3187E95C-C2D2-4B65-9E39-A791BD528E1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3187E95C-C2D2-4B65-9E39-A791BD528E1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3187E95C-C2D2-4B65-9E39-A791BD528E1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3187E95C-C2D2-4B65-9E39-A791BD528E1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{316A93C3-2009-4E90-9A91-4797E15CFF59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{316A93C3-2009-4E90-9A91-4797E15CFF59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{316A93C3-2009-4E90-9A91-4797E15CFF59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{316A93C3-2009-4E90-9A91-4797E15CFF59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC249734-869A-4E01-8432-0D59FEB7BF5A}
+	EndGlobalSection
+EndGlobal
