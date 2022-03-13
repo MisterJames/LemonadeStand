@@ -1,9 +1,10 @@
 
-///===---   game engine   ---===///
 
 // this class is used to process the current state of the 
 // game and progress it forward. 
 
+using System.Collections;
+///===---   game engine   ---===///
 public static class GameEngine
 {
     private const int SignCost = 50;
@@ -45,18 +46,29 @@ public static class GameEngine
 
     public static double ComputePriceModifier(int price)
     {
-        var priceShift = 50;
-        var sweetSpot = 40;
-        var salesDrift = -2;
-        var priceScale = 0.124;
-        var priceAnchor = 200;
+        // these are the values that we worked out to compute the
+        // affect of the price on the amount of potential sales
 
-        var effect = Math.Log(0.25) * price + 100;
-        var modifier = (Math.Max(effect, 2.5) / 100);
+        double priceAnchor = 200.0;    // a
+        double sweetSpot = 40;         // b
+        double salesDrift = -2;        // c
+        double priceScale = 0.125;     // d
+        double priceShift = 50;        // g/f
 
-        Console.WriteLine($"Price of {price} left {modifier} modifier.");
+        double priceModifier = -(
+            (   priceAnchor + 
+                (sweetSpot * (price - priceShift)) +
+                (salesDrift * Math.Pow(price - priceShift, 2)) +
+                (priceScale * Math.Pow(price - priceShift, 3)) 
+            ) / priceAnchor) + priceShift;
 
-        return modifier;
+        priceModifier = Math.Min(100, priceModifier);
+        priceModifier = Math.Max(0, priceModifier);
+
+        Console.WriteLine($"Price of {price} left {priceModifier} modifier.");
+
+        return priceModifier;
     }
-
+     
 }
+
