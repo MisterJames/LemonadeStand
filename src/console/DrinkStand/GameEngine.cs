@@ -9,9 +9,11 @@ public static class GameEngine
 {
     public const int NormalDrinkCost = 20;
     public const double FreeSugarDiscount = 0.25;
-    private const int SignCost = 50;
-    private const int TypicalRetailPrice = 50;
-    private const int TypicalDailySales = 50;
+    public const string GameName = "Lemonade Stand";
+    public const int TypicalDailySales = 50;
+    public const int SignCost = 50;
+    public const int TypicalRetailPrice = 50;
+
 
     public static DailyResult ProcessDay(GameState state, PlayerProfile player, double weatherModifier, DailyChoices choices)
     {

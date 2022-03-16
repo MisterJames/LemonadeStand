@@ -1,6 +1,6 @@
-﻿// display our game banner
+﻿// display our game banner and instructions
 Console.Clear();
-Console.WriteLine($"{Environment.NewLine}Welcome to Drink Stand!{Environment.NewLine}");
+DisplayWelcome(GameEngine.GameName, GameEngine.TypicalRetailPrice);
 WaitForEnterPress();
 Console.Clear();
 
@@ -39,9 +39,6 @@ while (game.ContinuePlaying)
     game.ContinuePlaying = ShouldContinue();
 
 }
-
-
-
 
 
 ///===---   input functions   ---===///
@@ -105,9 +102,10 @@ int GetNumberInputFromConsole(string prompt)
     // number is the starting value that we just set. this loop lets the user
     // type something in, and we will try to turn it into a number until the
     // text entered can be turned into a number
-    while (number < 0)
+    while (number < 1)
     {
         // display the prompt...
+        Console.WriteLine();
         Console.Write(prompt);
 
         // next, we let the user type...
@@ -119,7 +117,6 @@ int GetNumberInputFromConsole(string prompt)
         {
             // the result of parsing was false, so we couldn't get a number
             Console.WriteLine("You didn't type a valid number!");
-            WaitForEnterPress();
         }        
     }
     return number;
@@ -218,5 +215,40 @@ void DisplayDailyResults(GameState state)
         Console.WriteLine();
         
     }
+}
+
+void DisplayWelcome(string gameName, int typicalPrice)
+{
+    var currentForegroudColor = Console.ForegroundColor;
+
+    Console.WriteLine("--------------------------");
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine($"{Environment.NewLine}Welcome to {gameName}!{Environment.NewLine}");
+    Console.ForegroundColor = currentForegroudColor;
+    Console.WriteLine("--------------------------");
+
+    Console.WriteLine();
+    Console.WriteLine($"The game of {gameName} is quite simple. Each day you will set{Environment.NewLine}" +
+        $"a price for your lemonade, make some signs and decide how {Environment.NewLine}" +
+        $"many glasses you're going to make. Most people around here {Environment.NewLine}" +
+        $"think that {typicalPrice} cents is a good price for a cup of lemonade.");
+
+    Console.WriteLine();
+    Console.WriteLine($"Be sure to check the weather forecast! The weather plays a {Environment.NewLine}" +
+        $"big part in determining how many glasses of lemonade you will{Environment.NewLine}" +
+        "sell. Just hope there isn't a thunderstorm!");
+
+    Console.WriteLine();
+    Console.WriteLine($"To get started, your parents were able to find a bag of {Environment.NewLine}" +
+        $"sugar in the pantry, so your lemonade is cheaper for the {Environment.NewLine}" +
+        "first three days!");
+
+    Console.WriteLine();
+    Console.WriteLine($"NOTE: One or two people can play, but your sales and {Environment.NewLine}" +
+        $"advertising will not affect each other's sales.");
+
+    Console.WriteLine();
+    Console.WriteLine("--------------------------");
+
 }
 
