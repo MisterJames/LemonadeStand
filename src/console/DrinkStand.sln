@@ -5,7 +5,9 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrinkStand", "DrinkStand\DrinkStand.csproj", "{3187E95C-C2D2-4B65-9E39-A791BD528E1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrinkStandTests", "DrinkStandTests\DrinkStandTests.csproj", "{316A93C3-2009-4E90-9A91-4797E15CFF59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrinkStandTests", "DrinkStandTests\DrinkStandTests.csproj", "{316A93C3-2009-4E90-9A91-4797E15CFF59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrinkStand.Core", "..\core\DrinkStand.Core\DrinkStand.Core.csproj", "{C3AB8732-E5B5-4063-96D1-043E288CEAD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{316A93C3-2009-4E90-9A91-4797E15CFF59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{316A93C3-2009-4E90-9A91-4797E15CFF59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{316A93C3-2009-4E90-9A91-4797E15CFF59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3AB8732-E5B5-4063-96D1-043E288CEAD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3AB8732-E5B5-4063-96D1-043E288CEAD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3AB8732-E5B5-4063-96D1-043E288CEAD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3AB8732-E5B5-4063-96D1-043E288CEAD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
