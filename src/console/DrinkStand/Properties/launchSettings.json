@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DrinkStand": {
+      "commandName": "Project",
+      "commandLineArgs": "--game-name \"Your Lemonade Stand\""
+    }
+  }
+}
