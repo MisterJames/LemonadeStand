@@ -1,6 +1,6 @@
 # Lemonade Stand
 
-An browser-based, over-powered Azure uprade of the beloved 1979 game, from back in the Apple II days. You may also be familiar with it from C-64/128 or various DOS ports. I played it first on the Commodore 64 and it's one of the first games I think we had. Nostalgia for ya.
+A project that will eventually be a browser-based, over-powered Azure uprade of the beloved 1979 game, from back in the Apple II days. You may also be familiar with it from C-64/128 or various DOS ports. I played it first on the Commodore 64 and it's one of the first games I think we had. Nostalgia for ya.
 
 ![Original Opening Screen](original_opening_screen.jpg)
 
